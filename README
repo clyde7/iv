@@ -1,0 +1,9 @@
+iv -- Image Viewer
+
+iv is a simple image viewer I developed during my PhD. iv belonged to a graphics library called cuboid, which was a kitchen sink for anything related to my research. Thus, most of the source code is research quality: no documentation or comments, plenty of dead code and bugs. Unaware of the internals, many students in my lab found the tool useful. As I will likely not have much time to maintain the source in the future, I decided to open source it. It is known to build under Ubuntu and Mac OS using MacPorts, the Cygwin port is out-of-date.
+
+The main reason to develop this viewer was to create a usable image viewer which supports OpenEXR images. Besides EXR, iv supports GIF, JPEG, PNG, PNM/PGM/PPM, and TIFF. A key feature of this viewer is that it allows to load many images simultaneously and switch around, and zoom into an image down to the individual pixels. When pixels become large enough, it displays its content, namely coordinates and color values.
+
+Claude Knaus
+claude.knaus@gmail.com
+
