@@ -4,6 +4,70 @@ iv is a simple image viewer I developed during my PhD. iv belonged to a graphics
 
 The main reason to develop this viewer was to create a usable image viewer which supports OpenEXR images. Besides EXR, iv supports GIF, JPEG, PNG, PNM/PGM/PPM, and TIFF. A key feature of this viewer is that it allows to load many images simultaneously and switch around, and zoom into an image down to the individual pixels. When pixels become large enough, it displays its content, namely coordinates and color values.
 
+
+PREREQUISITES
+
+    standard image libraries: OpenEXR, libpng, libgif, libjpeg, libtiff, ...
+    on Ubuntu, install the microsoft fonts
+
+
+BUILDING
+
+    make
+
+
+USAGE
+ 
+    iv [options] <files>
+
+
+OPTIONS
+
+    -h, --help                   usage
+    -v, --verbose                verbose output
+    -bg, --background <color>    specify alternative background color
+    -F, --fullscreen             start in fullscreen
+    -fc, --false-colors          start in false colors mode (grayscale)
+    -g, --gamma <gamma value>    specify a gamma value
+    -c, --contrast <contrast>    scale pixel values by contrast value
+    -s, --scale <scale>          zoom with scale factor
+    -f, --filter                 start with bilinear pixel filter
+    -p, --play                   play slideshow
+    -d, --delay <delay>          slideshow delay between images in seconds
+    -hl, --highlight <region>    mark a rectangular area in the image
+    -pr, --precision <precision> specify number of digits for color values
+
+
+MOUSE
+
+    left button: panning
+    mouse wheel: zoom by factor sqrt(2)
+
+
+KEYBOARD
+
+    Esc           quit the viewer
+    Home          select first image
+    End           select last image
+    Left/Right    select previous/next image
+    Page Down/Up  move forward/backward by 10 images
+    1, 2, ... 0   select among first 10 images
+    P             prints properties of current image
+    D             computes a diff between current and next image
+    C             center the image
+    g             toggle false colors for grayscale images
+    G             toggle gamma value between 1 and 2.2
+    -, +/=        decrease/increase contrast by factor 2
+    l, L          cycle through image layers
+    c             cycle through color channels
+    h, v          flip horizontaly or vertically
+    w, W          zoom to fit width, height of window
+    s, S          zoom by factor sqrt(2)
+    f             toggle bilinear pixel filter
+    F, F11        toggle fullscreen
+    R             reset contrast, zoom, panning, and channel
+   
+
 Claude Knaus
 claude.knaus@gmail.com
 
